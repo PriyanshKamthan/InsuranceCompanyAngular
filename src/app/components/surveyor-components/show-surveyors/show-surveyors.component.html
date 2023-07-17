@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="header">
+    <div class="fill-remaining-space">
+      <h2 class="heading">All Surveyors</h2>
+    </div>
+    <button
+      color="primary"
+      class="full-length"
+      routerLink="/surveyor/new"
+      mat-button
+    >
+    <mat-icon>add</mat-icon>
+      Add Surveyor
+    </button>
+    <button
+      color="accent"
+      class="full-length"
+      routerLink="/surveyor/update"
+      mat-button
+    >
+      <mat-icon>update</mat-icon>
+      Update Surveyor
+    </button>
+    <button
+      class="full-length"
+      routerLink="/claim/approve"
+      mat-button
+    >
+    <mat-icon>check</mat-icon>
+      Approve Claim
+    </button>
+  </div>
+
+  <table mat-table [dataSource]="allSurveyors" class="mat-elevation-z8">
+    <ng-container matColumnDef="surveyorId">
+      <th mat-header-cell *matHeaderCellDef>Surveyor ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.surveyorId }}</td>
+    </ng-container>
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef>First Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+    </ng-container>
+    <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef>Last Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+    </ng-container>  
+    <ng-container matColumnDef="estimateLimit">
+      <th mat-header-cell *matHeaderCellDef>Estimate Limit</th>
+      <td mat-cell *matCellDef="let element">{{ element.estimateLimit }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

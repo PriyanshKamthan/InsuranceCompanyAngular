@@ -1,0 +1,23 @@
+<div class="add-claim-form-container">
+  <mat-card class="card">
+    <h2>Release Surveyor Fees</h2>
+
+    <mat-form-field class="input-form-field" appearance="outline">
+      <mat-label>Enter Claim ID</mat-label>
+      <input name="claimId" [(ngModel)]="claimId" matInput />
+    </mat-form-field>
+
+    <div class="button-container">
+      <button
+        color="primary"
+        mat-stroked-button
+        class="claim-button"
+        (click)="onReleaseSurveyorFees()"
+        id="add-claim-button"
+      >
+        Generate Payment
+      </button>
+    </div>
+    <!-- {{claimId | json}} -->
+  </mat-card>
+</div>

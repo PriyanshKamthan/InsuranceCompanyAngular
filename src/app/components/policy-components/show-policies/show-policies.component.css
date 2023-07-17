@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+  padding: 10px;
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.header {
+  display: flex;
+}
+
+.container {
+  padding: 20px;
+}

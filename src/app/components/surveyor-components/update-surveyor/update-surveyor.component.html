@@ -1,0 +1,60 @@
+<div class="add-claim-form-container">
+    <mat-card class="card">
+      <h2>Update surveyor</h2>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter Surveyor Id</mat-label>
+        <input name="surveyorIdInput" [(ngModel)]="surveyorIdInput" matInput />
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter first name</mat-label>
+        <input
+          name="firstName"
+          [(ngModel)]="surveyor.firstName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter last name</mat-label>
+        <input
+          name="lastName"
+          [(ngModel)]="surveyor.lastName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter estimate limit</mat-label>
+        <input
+          name="estimateLimit"
+          [(ngModel)]="surveyor.estimateLimit"
+          matInput
+        />
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button
+          color="accent"
+          mat-stroked-button
+          class="claim-button"
+          (click)="onSearchSurveyor()"
+        >
+          Search Policy
+        </button>
+  
+        <button
+          color="primary"
+          mat-stroked-button
+          class="claim-button"
+          (click)="onUpdateSurveyor()"
+        >
+          Update Policy
+        </button>
+      </div>
+      <!-- {{ surveyorIdInput | json }}
+      <br />
+      {{ surveyor | json }} -->
+    </mat-card>
+  </div>  

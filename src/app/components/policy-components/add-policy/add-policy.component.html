@@ -1,0 +1,64 @@
+<div class="add-claim-form-container">
+    <mat-card class="card">
+      <h2>Create new policy</h2>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter insured first name</mat-label>
+        <input
+          name="insuredFirstName"
+          [(ngModel)]="policy.insuredFirstName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter insured last name</mat-label>
+        <input
+          name="insuredLastName"
+          [(ngModel)]="policy.insuredLastName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter date of insurance</mat-label>
+        <input
+          name="dateOfInsurance"
+          [(ngModel)]="policy.dateOfInsurance"
+          matInput
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter insured email</mat-label>
+        <input
+          name="emailId"
+          [(ngModel)]="policy.emailId"
+          matInput
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter vehicle no.</mat-label>
+        <input
+          name="vehicleNo"
+          [(ngModel)]="policy.vehicleNo"
+          matInput
+        />
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button
+          color="primary"
+          mat-stroked-button
+          class="claim-button"
+          (click)="onAddPolicy()"
+          id="add-claim-button"
+        >
+          Add Policy
+        </button>
+      </div>
+      <!-- {{ policy | json}} -->
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,73 @@
+<div class="add-claim-form-container">
+  <mat-card class="card">
+    <h2>Update claim</h2>
+
+    <mat-form-field class="input-form-field" appearance="outline">
+      <mat-label>Enter Claim ID</mat-label>
+      <input name="claimIdInput" [(ngModel)]="claimIdInput" matInput />
+    </mat-form-field>
+
+    <mat-form-field class="input-form-field" appearance="outline">
+      <mat-label>Enter policy number</mat-label>
+      <input
+        name="policyNo"
+        [(ngModel)]="claimDetails.policy.policyNo"
+        matInput
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-form-field" appearance="outline">
+      <mat-label>Enter estimated loss</mat-label>
+      <input
+        name="estimatedLoss"
+        [(ngModel)]="claimDetails.estimatedLoss"
+        matInput
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-form-field" appearance="outline">
+      <mat-label>Enter date of accident</mat-label>
+      <input
+        name="dateOfAccident"
+        [(ngModel)]="claimDetails.dateOfAccident"
+        matInput
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-form-field">
+      <mat-label>Claim Status</mat-label>
+      <mat-select
+        name="claimStatus"
+        [(ngModel)]="claimDetails.claimStatus"
+        matInput
+      >
+        <mat-option value="open">Open</mat-option>
+        <mat-option value="closed">Closed</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button
+        color="accent"
+        mat-stroked-button
+        class="claim-button"
+        (click)="onSearchClaim()"
+      >
+        Search Claim
+      </button>
+
+      <button
+        color="primary"
+        mat-stroked-button
+        class="claim-button"
+        (click)="onUpdateClaim()"
+      >
+        Update Claim
+      </button>
+    </div>
+
+    <!-- {{ claimIdInput | json }}
+    <br />
+    {{ claimDetails | json }} -->
+  </mat-card>
+</div>

@@ -1,0 +1,91 @@
+<div class="add-claim-form-container">
+    <mat-card class="card">
+      <h2>Update policy</h2>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter Policy No</mat-label>
+        <input name="policyNoInput" [(ngModel)]="policyNoInput" matInput />
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter insured first name</mat-label>
+        <input
+          name="insuredFirstName"
+          [(ngModel)]="policy.insuredFirstName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter insured last name</mat-label>
+        <input
+          name="insuredLastName"
+          [(ngModel)]="policy.insuredLastName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter date of insurance</mat-label>
+        <input
+          name="dateOfInsurance"
+          [(ngModel)]="policy.dateOfInsurance"
+          matInput
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter email Id</mat-label>
+        <input
+          name="emailId"
+          [(ngModel)]="policy.emailId"
+          matInput
+        />
+      </mat-form-field>
+ 
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter date of insurance</mat-label>
+        <input
+          name="vehicleNo"
+          [(ngModel)]="policy.vehicleNo"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field">
+        <mat-label>Policy Status</mat-label>
+        <mat-select
+          name="status"
+          [(ngModel)]="policy.status"
+          matInput
+        >
+          <mat-option value="open">Open</mat-option>
+          <mat-option value="closed">Closed</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button
+          color="accent"
+          mat-stroked-button
+          class="claim-button"
+          (click)="onSearchPolicy()"
+        >
+          Search Policy
+        </button>
+  
+        <button
+          color="primary"
+          mat-stroked-button
+          class="claim-button"
+          (click)="onUpdatePolicy()"
+        >
+          Update Policy
+        </button>
+      </div>
+  
+      <!-- {{ policyNoInput | json }}
+      <br />
+      {{ policy | json }} -->
+    </mat-card>
+  </div>  

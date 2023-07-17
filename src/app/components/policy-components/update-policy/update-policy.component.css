@@ -1,0 +1,22 @@
+.button-container {
+    text-align: center;
+}
+.card{
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-form-field {
+    margin-bottom: -1em;;
+}
+.add-claim-form-container {
+    margin: auto;
+    width: 60%;
+}
+
+.claim-button {
+    margin: 5px;
+    width: 200px;
+    height: 40px;
+}

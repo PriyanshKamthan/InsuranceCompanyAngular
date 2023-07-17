@@ -1,0 +1,45 @@
+<div class="add-claim-form-container">
+    <mat-card class="card">
+      <h2>Add new surveyor</h2>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter surveyor first name</mat-label>
+        <input
+          name="insuredFirstName"
+          [(ngModel)]="surveyor.firstName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter surveyor last name</mat-label>
+        <input
+          name="insuredLastName"
+          [(ngModel)]="surveyor.lastName"
+          matInput
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input-form-field" appearance="outline">
+        <mat-label>Enter estimate limit</mat-label>
+        <input
+          name="estimateLimit"
+          [(ngModel)]="surveyor.estimateLimit"
+          matInput
+        />
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button
+          color="primary"
+          mat-stroked-button
+          class="claim-button"
+          (click)="onAddSurveyor()"
+        >
+          Add Surveyor
+        </button>
+      </div>
+      <!-- {{ surveyor | json}} -->
+    </mat-card>
+  </div>
+  
